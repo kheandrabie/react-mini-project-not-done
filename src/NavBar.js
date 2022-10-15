@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoNav from './img/logo1-resize.png'
 
 function NavBar() {
   const renderLoginLogout = () => {
@@ -27,36 +28,37 @@ function NavBar() {
     );
   };
   return (
-    <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-      <div className="container-fluid">
-        {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-        <a className="navbar-brand" href="#">
-          Navbar baru bagas
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
-        <div className="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
-              <Link to="/">
-                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
-                <a className="nav-link">Home</a>
-              </Link>
-            </li>
-            {renderLoginLogout()}
-          </ul>
-        </div>
+    <nav className="navbar sticky-top navbar-expand-lg navbar-dark bg-transparent">
+    <div className="container-fluid">
+      {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+      <a className="navbar-brand" href="/">
+      <img src={logoNav} height="30%" alt="logo-nav"/>
+      </a>
+      <button
+        className="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+          <li className="nav-item">
+            <Link to="/">
+              {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
+              <a className="nav-link">Home</a>
+            </Link>
+          </li>
+          {renderLoginLogout()}
+        </ul>
       </div>
-    </nav>
+    </div>
+  </nav>
   );
 }
 export default NavBar;
+

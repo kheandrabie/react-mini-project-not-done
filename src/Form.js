@@ -3,6 +3,7 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import axios from 'axios';
 import { API_KEY } from './constants';
+import portaitImg from './img/portrait-1.png'
 
 async function generateRequestToken() {
   // async/await
@@ -76,37 +77,78 @@ const Form = () => {
     console.log(localStorage.getItem('sessionID'))
   }, [])
 
-  return <div>
-    <form onSubmit={formik.handleSubmit}>
-      <label htmlFor="username">Username</label>
-      <input
+  // return <div>
+  //   <form onSubmit={formik.handleSubmit}>
+  //     <label htmlFor="username">Username</label>
+  //     <input
+  //       id="username"
+  //       name="username"
+  //       type="text"
+  //       onChange={formik.handleChange}
+  //       onBlur={formik.handleBlur}
+  //       value={formik.values.username}
+  //     />
+  //     {formik.touched.username && formik.errors.username ? (
+  //       <div>{formik.errors.username}</div>
+  //     ) : null}
+  //     <br></br>
+  //     <label htmlFor="password">Password</label>
+  //     <input
+  //       id="password"
+  //       name="password"
+  //       type="password"
+  //       onChange={formik.handleChange}
+  //       onBlur={formik.handleBlur}
+  //       value={formik.values.password}
+  //     />
+  //     {formik.touched.password && formik.errors.password ? (
+  //       <div>{formik.errors.password}</div>
+  //     ) : null}
+  //     <br></br>
+  //     <button type="submit">Submit</button>
+  //   </form>
+  // </div>
+
+return <div className="container pt-3 form_bg">
+<h1 className="text-light">Sign in</h1>
+<form onSubmit={formik.handleSubmit}>
+    <div className="row text-light">
+    <div className="col-md-5 mb-3">
+    <label className="form-label" htmlFor="username">Username</label>
+    <input
         id="username"
         name="username"
         type="text"
+        className="form-control"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         value={formik.values.username}
-      />
-      {formik.touched.username && formik.errors.username ? (
+    />
+    {formik.touched.username && formik.errors.username ? (
         <div>{formik.errors.username}</div>
-      ) : null}
-      <br></br>
-      <label htmlFor="password">Password</label>
-      <input
+    ) : null}
+    <label className="form-label" htmlFor="password">Password</label>
+    <input
         id="password"
         name="password"
         type="password"
+        className="form-control"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
         value={formik.values.password}
-      />
-      {formik.touched.password && formik.errors.password ? (
+    />
+    {formik.touched.password && formik.errors.password ? (
         <div>{formik.errors.password}</div>
-      ) : null}
-      <br></br>
-      <button type="submit">Submit</button>
-    </form>
-  </div>
+    ) : null} 
+    <button type="submit" class="btn btn-danger my-3">Submit</button> 
+    </div>
+    <div className="col-md-7">
+        <img src={portaitImg} alt="" className="img-fluid"></img>
+    </div> 
+    </div>
+
+</form>
+</div>
 }
 
 export default Form;

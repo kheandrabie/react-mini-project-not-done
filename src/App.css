@@ -36,3 +36,59 @@
     transform: rotate(360deg);
   }
 }
+
+body {
+  height: 3000px;
+}
+
+.hero-bg {
+  background: linear-gradient(340deg, #D1151E,#3E1842,#0D0D0D);
+}
+.jumbo-bg {
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 503px;
+  display: flex;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 86px;
+  position: relative;;
+}
+.hero-bg {
+  background: linear-gradient(340deg, #D1151E,#3E1842,#0D0D0D);
+}
+
+h1 {
+  color: aliceblue;
+}
+
+.navbar {
+  /* background: linear-gradient(340deg, #D1151E,#3E1842,#0D0D0D);  */
+}
+
+.offcanvas-header {
+  background: linear-gradient( 186deg, #e50914 0.5%, rgba(62, 24, 66, 0.4) 42%, #000000 100% ),#000000;
+}
+
+.offcanvas-body {
+  background: linear-gradient( 317deg, #e50914 0.5%, rgba(62, 24, 66, 0.4) 42%, #000000 100% ),#000000;
+}
+
+.pa-fixed-header {
+background-color: #ffffff !important;
+-webkit-transition: background-color 1s ease-out;
+-moz-transition: background-color 1s ease-out;
+-o-transition: background-color 1s ease-out;
+transition: background-color 1s ease-out;
+}
+
+.text-black{
+  color: #157293 !important;
+}
+
+.navbar_nav {
+  height: 1000px;
+}
+
